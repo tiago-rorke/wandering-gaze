@@ -1,7 +1,6 @@
 # Wandering Gaze
 
-Interactive installation by Ana Teresa Vicente.
-
+Interactive installation by Ana Teresa Vicente.  
 http://www.anateresavicente.com/index.php/wandering-gaze/
 
 The system comprises:
@@ -18,20 +17,20 @@ This installation was largely made possible thanks to the wonderful [EyeWriter](
 
 ## Sources
 
-The eye-tracking sofware is built using the EyeWriter tool and openFrameworks.
+The eye-tracking sofware is built using the EyeWriter tool and openFrameworks.  
 http://eyewriter.org/
 
-CAD model of installation made with Onshape:
-https://cad.onshape.com/documents/b327fc03410528552058d868/w/0ee9eb11091f6ccb3df238ed/e/d6edd997d3fa7512d0595dc8
-the X-Y gantry is based on a previous plotter design:
-https://cad.onshape.com/documents/9c853be8b394a81c5aa6c314/w/0828b5069770ad60c812175c/e/8f06230b793865605afa23f3
-the motion uses the coreXY design:
-http://corexy.org/
-and the structure uses openbuilds:
-https://openbuilds.com/
+CAD model of installation made with Onshape:  
+https://cad.onshape.com/documents/b327fc03410528552058d868/w/0ee9eb11091f6ccb3df238ed/e/d6edd997d3fa7512d0595dc8  
+the X-Y gantry is based on a previous plotter design:  
+https://cad.onshape.com/documents/9c853be8b394a81c5aa6c314/w/0828b5069770ad60c812175c/e/8f06230b793865605afa23f3  
+the motion uses the coreXY design:  
+http://corexy.org/  
+and the structure uses openbuilds:  
+https://openbuilds.com/  
 
-The X-Y motion control is done with GRBL
-https://github.com/gnea/grbl
+The X-Y motion control is done with GRBL  
+https://github.com/gnea/grbl  
 
-Arduino is used in the viewfinder and the plotter:
-https://www.arduino.cc/
+Arduino is used in the viewfinder and the plotter:  
+https://www.arduino.cc/  
