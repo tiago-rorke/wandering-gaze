@@ -21,8 +21,7 @@ void viewfinderIO::setup() {
 	pled = false;
 
 	if(connectViewfinder) {
-		connected = serial.setup(port, baud);
-		serial.flush();
+		connected = connectSerial(port, baud, 5000);
 		while(serial.available() <= 0);
 		setEyeLeds(eyeLevel);
 		setLed(0);
@@ -87,6 +86,20 @@ void viewfinderIO::draw() {
 }
 
 //=========================== COMMS ==================================
+
+
+bool viewfinderIO::connectSerial(string port, int baud, int retryDelay) {
+
+	cout << "connecting to " << port << endl;
+	while(!serial.setup(port, baud)) {
+		cout << '.';
+   	ofSleepMillis(retryDelay);
+	}
+	connected = true;
+	serial.flush();	
+	return true;
+}
+
 
 void viewfinderIO::sendMessage(string msg) {
 	sendMessage(msg, true);

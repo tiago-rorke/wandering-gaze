@@ -19,6 +19,7 @@ class viewfinderIO {
 		ofSerial serial;
 		string port;
 		int baud;
+		bool connectSerial(string port, int baud, int retryDelay);
 		bool monitorSerial;
 		string 	inString;
 		void sendMessage(string msg);
