@@ -29,6 +29,7 @@ class grblTalk {
 		ofSerial serial;
 		string port;
 		int baud;
+		bool connectSerial(string port, int baud, int retryDelay);
 		string 	inString;
 		void sendMessage(string msg);
 		vector<string> sendQueue;

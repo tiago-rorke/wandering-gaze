@@ -45,7 +45,8 @@ void grblTalk::setup(int width, int height, int x, int y, float scale){
 	connected = false;
 
 	if(connectPlotter) {
-		connected = serial.setup(port, baud);
+
+		connected = connectSerial(port, baud, 5000);
 		serial.flush();
 		while(serial.available() <= 0) {
 			getStatus();
@@ -511,6 +512,20 @@ void grblTalk::exportPDF() {
 
 
 //=========================== COMMS ==================================
+
+
+
+bool grblTalk::connectSerial(string port, int baud, int retryDelay) {
+
+	cout << "connecting to " << port << endl;
+	while(!serial.setup(port, baud)) {
+		cout << '.';
+   	ofSleepMillis(retryDelay);
+	}
+	connected = true;
+	serial.flush();	
+	return true;
+}
 
 
 string grblTalk::toGcode(ofVec3f v, uint32_t n) {
