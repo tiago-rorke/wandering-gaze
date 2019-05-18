@@ -1,21 +1,85 @@
-# xcode noise
-build/*
-*/*.pbxuser
-*/*.mode1v3
-*/xcuserdata/*
-*/project.xcworkspace
+###########################
+# ignore generated binaries
+# but not the data folder
+###########################
 
-#folders
-#*/*/bin
-!*/bin/data
-*/*.app
-bin/*.app
+*/bin/*
+!*/bin/data/
 
-# osx noise
-.DS_Store
-profile
+#########
+# general
+#########
 
-# binaries
+config.make
+/obj/*
+*/[Bb]uild/
+*/[Oo]bj/
+*/[Dd]ebug*/
+*/[Rr]elease*/
 *.o
+*.mode*
+*.app/
+*.pyc
+.svn/
+*.log
 *.exe
 *.dll
+
+########################
+# IDE files which should
+# be ignored
+########################
+
+# XCode
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+# XCode 4
+xcuserdata
+*.xcworkspace
+
+# Code::Blocks
+*.depend
+*.layout
+
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.pdb
+*.ilk
+*.aps
+ipch/
+
+# Eclipse
+.metadata
+local.properties
+.externalToolBuilders
+
+##################
+# operating system
+##################
+
+# Linux
+*~
+# KDE
+.directory
+.AppleDouble
+
+# OSX
+.DS_Store
+*.swp
+*~.nib
+# Thumbnails
+._*
+
+# Windows
+# Image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
+
+# Android
+.csettings
