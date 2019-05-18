@@ -141,6 +141,11 @@ void eyetracking::keyPressed(int key){
 			offset_file << eyeSmoothed.x << " " << eyeSmoothed.y << std::endl;
 			offset_file.close();
 			break;
+
+		case	'f':
+		case	'F':
+			ofToggleFullscreen();
+			break;			
 	}
 	
 	if (mode == MODE_CALIBRATING)		CM.keyPressed(key);
