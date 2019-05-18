@@ -84,6 +84,7 @@ void wanderingGaze::update(float eyeX, float eyeY, bool newFrame) {
 
  		// when a face appears
 		if(gotFace && !pFace) {
+			plotter.paused = true;
 			gotOffset = false; // reset offset
 			offset.set(0,0);
 			for(int i = 0; i < numOffsetSamples; i++) {
@@ -132,11 +133,15 @@ void wanderingGaze::update(float eyeX, float eyeY, bool newFrame) {
 
 		// when the face disappears
 		if(!gotFace && pFace) {
+			if(!recording) {
+				plotter.paused = false;	
+			}			
 			recording = false; // stop recording			
 			tracking = false;
 			//recordingStartTimer = 0;
 			plotterStartTimer = t;
-			if(plotter.drawList.size() > 0) {
+			if(plotter.trackList.size() > 0) {
+				plotter.generatePath();
 				plotter.addParkPos();
 				plotter.exportPDF();
 			}

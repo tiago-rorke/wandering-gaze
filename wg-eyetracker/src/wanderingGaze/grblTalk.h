@@ -55,11 +55,16 @@ class grblTalk {
 		float vDist(ofVec3f v1, ofVec3f v2);
 		ofVec3f constrain(ofVec3f v);
 		vector<ofVec3f> trackList; // unaltered eyetracking path for reference
-		void recordVertex(float x, float y); // put vertex into trackList, instead of directly into drawList
+		void recordVertex(float x, float y); // put vertex into trackList
+		void generateVertex(float x, float y); // generate vertex for drawList, based on trackList + scrubbing and fetching
+		void generatePath();
 		void addParkPos();
 		void resetPaths();
 		void exportPDF();
+		int exportDrawings;
 		int fetchInterval;
+		int fetchIntervalMin;
+		int fetchIntervalMax;
 		int fetchWipeDistMin;
 		int fetchWipeDistMax;
 		// for generating "scrubbing" paths

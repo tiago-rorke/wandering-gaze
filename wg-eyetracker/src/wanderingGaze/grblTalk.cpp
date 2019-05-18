@@ -32,7 +32,8 @@ void grblTalk::setup(int width, int height, int x, int y, float scale){
 	scrubThreshold = settings.getValue("app:scrubThreshold", 500, 0);
 	maxScrubDist = settings.getValue("app:maxScrubDist", 100, 0);
 
-	fetchInterval = settings.getValue("app:maxScrubDist", 100, 0);
+	fetchIntervalMin = settings.getValue("app:fetchIntervalMin", 80, 0);
+	fetchIntervalMax = settings.getValue("app:fetchIntervalMax", 160, 0);
 	fetchWipeDistMax = settings.getValue("app:fetchWipeDistMax", 200, 0);
 	fetchWipeDistMin = settings.getValue("app:fetchWipeDistMin", 50, 0);
 
@@ -108,6 +109,9 @@ void grblTalk::setup(int width, int height, int x, int y, float scale){
 	for(int i = 0; i < numScrubSamples; i++) {
 		scrubSamples[i].set(0,0);
 	}
+	fetchInterval = ofRandom(fetchIntervalMin, fetchIntervalMax);
+
+	exportDrawings = 1;
 	/*
 	queueVertex(0,pageHeight);
 	queueVertex(pageWidth,pageHeight);
@@ -270,7 +274,6 @@ void grblTalk::update(float eyeX, float eyeY, bool recording, bool live){
 					sendQueue.push_back(toGcode(drawList[0], traceList.size()+1));
 					traceList.push_back(drawList[0]);
 					drawList.erase(drawList.begin());
-		
 					idle = false;
 				}
 			}
@@ -406,6 +409,18 @@ void grblTalk::recordVertex(float x, float y) {
 	ofVec3f v = ofVec3f(x,y);
 	trackList.push_back(constrain(v));
 
+}
+
+void grblTalk::generatePath() {
+	drawList.clear();
+	for(int i=0; i<trackList.size(); i++) {
+		generateVertex(trackList[i].x, trackList[i].y);
+	}
+	addParkPos();
+}
+
+void grblTalk::generateVertex(float x, float y) {
+
 	// check range of last vertexes to know if to apply scrubbing filter
 	scrubSamples[sampleIndex].set(x, y); // add sample to array
 	sampleIndex++;
@@ -425,9 +440,12 @@ void grblTalk::recordVertex(float x, float y) {
 
 	sampleRange.set(maxX - minX, maxY - minY);
 
-	int scrubDist =  scrubThreshold - (sampleRange.x + sampleRange.y)/2;
+	//cout << (sampleRange.x + sampleRange.y)/2 << " ";
+
+	float scrubDist =  scrubThreshold - (sampleRange.x + sampleRange.y)/2;
 	if(scrubDist > 0) {
-		scrubDist *= (maxScrubDist / scrubThreshold);
+		scrubDist *= (float(maxScrubDist) / float(scrubThreshold));
+		//cout << scrubDist << endl;
 		x += ofRandom(-scrubDist, scrubDist);
 		y += ofRandom(-scrubDist, scrubDist);
 	}
@@ -442,6 +460,7 @@ void grblTalk::recordVertex(float x, float y) {
 		if(dir < 1) w *= -1;
 		queueVertex(x - w/2, pageHeight);
 		queueVertex(x + w/2, pageHeight);
+		fetchInterval = ofRandom(fetchIntervalMin, fetchIntervalMax);
 	}
 
 }
@@ -488,25 +507,51 @@ void grblTalk::addParkPos() {
 
 
 void grblTalk::exportPDF() {
-	ofBeginSaveScreenAsPDF(ofGetTimestampString() + "_" + ofGetTimestampString() + ".pdf", true);
+	ofBeginSaveScreenAsPDF("export_tracking/" + ofGetTimestampString() + ".pdf", true);
 
+	ofBackground(255,255,255);
 	ofNoFill();	
 	ofSetHexColor(0x000000);
 	ofDrawRectangle(0, 0, pageWidth, pageHeight);
+	
 	float x, y;
-
-	ofSetHexColor(0x000000);
 	ofBeginShape();
-	if(drawList.size() > 0) {
-		for(int i=0; i<drawList.size(); i++) {
-			x = drawList[i].x;
-			y = drawList[i].y;
+	if(trackList.size() > 0) {
+		for(int i=0; i<trackList.size(); i++) {
+			x = trackList[i].x;
+			y = trackList[i].y;
 			ofVertex(x, y);
 		}
 	}
 	ofEndShape();
-
 	ofEndSaveScreenAsPDF();		
+
+	for(int h=0; h<exportDrawings; h++) {
+		
+		drawList.clear();
+		generatePath();
+
+		ofBeginSaveScreenAsPDF("export_drawing/" + ofGetTimestampString() + ".pdf", true);
+
+		ofBackground(255,255,255);
+		ofNoFill();	
+		ofSetHexColor(0x000000);
+		
+		float x, y;
+		ofBeginShape();
+		if(drawList.size() > 0) {
+			for(int i=0; i<drawList.size(); i++) {
+				x = drawList[i].x;
+				y = drawList[i].y;
+				ofVertex(x, y);
+			}
+		}
+		ofEndShape();
+		ofEndSaveScreenAsPDF();	
+	}
+	
+	trackList.clear();
+
 
 }
 

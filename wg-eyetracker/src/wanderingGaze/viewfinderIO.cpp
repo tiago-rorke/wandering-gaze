@@ -116,11 +116,11 @@ void viewfinderIO::sendMessage(string msg, bool monitor) {
 }
 
 void viewfinderIO::setLed(int pwm) {
-	sendMessage("L" + ofToString(pwm));
+	sendMessage("L" + ofToString(pwm), false);
 }
 
 void viewfinderIO::setEyeLeds(int pwm) {	
-	sendMessage("E" + ofToString(pwm));
+	sendMessage("E" + ofToString(pwm), false);
 }
 
 void viewfinderIO::ping() {
