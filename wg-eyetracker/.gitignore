@@ -1,16 +1,20 @@
+
+*/globalSettings.xml
+config.make
+
+
 ###########################
 # ignore generated binaries
 # but not the data folder
 ###########################
 
-*/bin/*
+/bin/*
 !*/bin/data/
 
 #########
 # general
 #########
 
-config.make
 /obj/*
 */[Bb]uild/
 */[Oo]bj/
