@@ -125,27 +125,27 @@ void eyetracking::keyPressed(int key){
 	
 	switch (key){
 			
-		case	OF_KEY_RETURN:
+		case	OF_KEY_RETURN: {
 			mode ++;
 			mode %= 3; // number of modes;
-			break;
+			} break;
 	
 		case	'm':
-		case	'M':
+		case	'M': {
 			bMouseSimulation = !bMouseSimulation;
-			break;
+			} break;
 
 		case	'q':
-		case	'Q':
+		case	'Q': {
 			ofFile offset_file (ofToDataPath("settings/offset.txt"), ofFile::WriteOnly);	
 			offset_file << eyeSmoothed.x << " " << eyeSmoothed.y << std::endl;
 			offset_file.close();
-			break;
+			} break;
 
 		case	'f':
-		case	'F':
+		case	'F': {
 			ofToggleFullscreen();
-			break;			
+			} break;
 	}
 	
 	if (mode == MODE_CALIBRATING)		CM.keyPressed(key);

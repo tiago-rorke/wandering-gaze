@@ -61,6 +61,8 @@ class grblTalk {
 		void addParkPos();
 		void resetPaths();
 		void exportPDF();
+		string exportPath_tracking;
+		string exportPath_drawing;
 		int exportDrawings;
 		int fetchInterval;
 		int fetchIntervalMin;

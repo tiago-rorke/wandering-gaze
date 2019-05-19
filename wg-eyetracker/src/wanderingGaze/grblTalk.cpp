@@ -37,6 +37,9 @@ void grblTalk::setup(int width, int height, int x, int y, float scale){
 	fetchWipeDistMax = settings.getValue("app:fetchWipeDistMax", 200, 0);
 	fetchWipeDistMin = settings.getValue("app:fetchWipeDistMin", 50, 0);
 
+	exportPath_tracking = settings.getValue("app:exportPath_tracking", "../../../../export_tracking/", 0);	
+	exportPath_drawing = settings.getValue("app:exportPath_drawing", "../../../../export_drawing/", 0);		
+
 	pageWidth = width;
 	pageHeight = height;
 	pageX = x;
@@ -507,7 +510,7 @@ void grblTalk::addParkPos() {
 
 
 void grblTalk::exportPDF() {
-	ofBeginSaveScreenAsPDF("export_tracking/" + ofGetTimestampString() + ".pdf", true);
+	ofBeginSaveScreenAsPDF(exportPath_tracking + ofGetTimestampString() + ".pdf", true);
 
 	ofBackground(255,255,255);
 	ofNoFill();	
@@ -531,7 +534,7 @@ void grblTalk::exportPDF() {
 		drawList.clear();
 		generatePath();
 
-		ofBeginSaveScreenAsPDF("export_drawing/" + ofGetTimestampString() + ".pdf", true);
+		ofBeginSaveScreenAsPDF(exportPath_drawing + ofGetTimestampString() + ".pdf", true);
 
 		ofBackground(255,255,255);
 		ofNoFill();	
