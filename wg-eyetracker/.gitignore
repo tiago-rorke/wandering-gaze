@@ -1,5 +1,6 @@
 
 */globalSettings.xml
+/bin/data/settings/globalSettings.xml
 config.make
 
 
@@ -9,7 +10,7 @@ config.make
 ###########################
 
 /bin/*
-!*/bin/data/
+!/bin/data/
 
 #########
 # general
