@@ -1,0 +1,25 @@
+# Packing Checklist
+
+- Tripod 
+    - base
+    - 3 metal legs
+    - shelf 
+    - viewfinder
+- Photo frame machine
+    - black frame cover 
+    - slotted standards
+- 1 Ikea stool 
+- Screws box 
+    - screws
+    - power supply + cable
+    - calibration frame
+    - viewfinder glass
+- Metal shavings box and instructions label
+- Debugging box
+    ◦ double adapter eu plug
+    ◦ router
+    ◦ 12v ac-dc adapter + cable
+    ◦ 5v ac-dc adapter
+    ◦ 2x network patch cables
+    ◦ 2x USB micro cables
+    ◦ 1x USB mini cable
