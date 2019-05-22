@@ -13,14 +13,16 @@
 5. Ensure that the power and usb cables are falling from the center of the frame, and put on the black frame cover.
   
 ## Tripod  
-1. Assemble the three legs to the tripod base, ensuring the power and usb extension cables exit at the front corner of the base, and that the two short usb cables exit at the top of the left leg. Use 3 of the medium length socket-head cap screws.  
-2. With the cover of the pc box removed, attach it to the three legs, taking note of the front label and passing the cables through the holes in the corners. Use 3 of the long cap screws.  
-3. Connect all the cables in the box following the labels, and also the unique fan connector which is not labelled. Fasten the lid of the box using the 3 short low profile cap screws.  
-  
+1. Assemble the three legs to the tripod base, ensuring the power and usb extension cables exit at the front corner of the base, and that the two short usb cables exit at the top of the left leg. Use 3 of the medium length socket-head cap screws.
+2.	Remove the top cover of the shelf by unscrewing the three black screws and attach it to the three legs, taking note of the front label and passing the cables through the holes in the corners. Use 3 of the long cap screws.
+3. Connect all the cables in the box following the labels, and also the unique fan connector which is not labelled. Fasten the lid of the box using the 3 short low profile cap screws.
+ 
+
 ## Viewfinder  
-1. Sit the viewfinder on the top of the tripod ensuring it is facing forwards. Fasten using the 3 short cap screws.
-2. Connect the two usb cables to the corresponding sockets on the viewfinder.  
-3. If necessary, clean the glass pane, then insert it into the slot of the viewfinder.  
+1. Attach the viewfinder mount to the base of the tripod using the remaining 3 long cap screws, first putting the springs in holes with the larger spring in the center hole. Take turns tightening each screw until the viewfinder is level and there is about a 5mm gap between the base of the viewfinder and the mount.
+2. Sit the viewfinder on the top of the tripod ensuring it is facing forwards. Fasten using the 3 short cap screws.
+3. Connect the two usb cables to the corresponding sockets on the viewfinder.  
+4. If necessary, clean the glass pane, then insert it into the slot of the viewfinder.  
 
 # Powering On/Off
 - The power button of the PC can be accessed via a hole on the bottom of the box.  Press the button once to power on or to power off.  It is not necessary to hold down the button.  While powering on or off, the light visible from the front of the box will be green.  When the system has finished booting it will be blue.  When powering off, please wait for the green light to turn off before unplugging or switching off the power.
