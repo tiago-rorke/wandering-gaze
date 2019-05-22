@@ -2,7 +2,7 @@
 
 ## Unpacking
 1. Remove all the elements from inside the machine, marking them off the checklist.
-2. Remove the machine from inside the black frame cover. Lift it out by holding onto the vertical part (the short side) of the aluminium frame.  **Please do not lift from the horizontal part of the frame, or any other part of the machine.** After removing it, lay the machine face down on the large foam sheet.
+2. Remove the machine from inside the black frame cover. Lift it out by holding onto the vertical part (the short side) of the aluminium frame, near the black brackets.  **Please do not lift from the horizontal part of the frame, or any other part of the machine.** After removing it, lay the machine face down on the large foam sheet.
 3. To remove the black frame cover, first remove some of the surrounding foam.
 
 ## Frame  
@@ -30,11 +30,11 @@
 
 # Calibration  
 Before the installation can be used the position of the viewfinder must be carefully adjusted:  
-1. Make sure the system is powered on and ready to use and put the overlay cover on the viewfinder, with the right eye looking through the grid.
+1. Make sure the system is powered on and ready to use and put the calibration frame on the viewfinder, with the right eye looking through the grid.
 2. Adjust the 3 screws holding the viewfinder, moving the tripod if necessary, until both:  
 	- the edges of the inside of the frame are aligned with the boundaries of the grid on the overlay.  
 	- and the red led of the viewfinder is aligned with the center of the cross of the grid.  
-3. Once adjusted, remove the overlay cover.
+3. Once adjusted, remove the calibration frame.
 
 # Usage
 - When someone looks through the viewfinder, they will see a red light appear.  They must look at the light until it disappears, at which point they can look at the photograph.

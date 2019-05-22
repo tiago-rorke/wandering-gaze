@@ -4,7 +4,7 @@
     - base
     - 3 metal legs
     - shelf 
-    - viewfinder
+    - viewfinder + calibration frame
 - Photo frame machine
     - black frame cover 
     - slotted standards
@@ -12,7 +12,6 @@
 - Screws box 
     - screws
     - power supply + cable
-    - calibration frame
     - viewfinder glass
 - Metal shavings box and instructions label
 - Debugging box
@@ -23,3 +22,7 @@
     ◦ 2x network patch cables
     ◦ 2x USB micro cables
     ◦ 1x USB mini cable
+- Envelope
+    - installation assembly and usage overview
+    - stool assembly instructions
+    - contacts
