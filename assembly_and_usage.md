@@ -16,10 +16,9 @@
 1. Assemble the three legs to the tripod base, ensuring the power and usb extension cables exit at the front corner of the base, and that the two short usb cables exit at the top of the left leg. Use 3 of the medium length socket-head cap screws.  
 2. With the cover of the pc box removed, attach it to the three legs, taking note of the front label and passing the cables through the holes in the corners. Use 3 of the long cap screws.  
 3. Connect all the cables in the box following the labels, and also the unique fan connector which is not labelled. Fasten the lid of the box using the 3 short low profile cap screws.  
-4. Mount the top of the tripod on the legs, ensuring the tabs for the screws are pointing away from the front of the tripod. Fasten using the 3 short cap screws.  
   
 ## Viewfinder  
-1. Fix the viewfinder to the tripod using the remaining 3 long cap screws.  Take turns tightening each screw until the viewfinder is level and there is about a 5mm gap between the base of the viewfinder and the top of the tripod.  
+1. Sit the viewfinder on the top of the tripod ensuring it is facing forwards. Fasten using the 3 short cap screws.
 2. Connect the two usb cables to the corresponding sockets on the viewfinder.  
 3. If necessary, clean the glass pane, then insert it into the slot of the viewfinder.  
 
@@ -29,11 +28,11 @@
 
 # Calibration  
 Before the installation can be used the position of the viewfinder must be carefully adjusted:  
-1. Make sure the system is powered on and ready to use and put the overlay cover on the viewfinder.  
-2. Adjust the 3 long screws, moving the tripod if necessary, until both:  
+1. Make sure the system is powered on and ready to use and put the overlay cover on the viewfinder, with the right eye looking through the grid.
+2. Adjust the 3 screws holding the viewfinder, moving the tripod if necessary, until both:  
 	- the edges of the inside of the frame are aligned with the boundaries of the grid on the overlay.  
 	- and the red led of the viewfinder is aligned with the center of the cross of the grid.  
-3. Once adjusted, remove the overlay cover.  
+3. Once adjusted, remove the overlay cover.
 
 # Usage
 - When someone looks through the viewfinder, they will see a red light appear.  They must look at the light until it disappears, at which point they can look at the photograph.
@@ -41,5 +40,5 @@ Before the installation can be used the position of the viewfinder must be caref
 
 # Troubleshooting
 - If the red light doesn't come on, or is on and doesn't turn off, please shut down the system, unplug the usb cables from the viewfinder, wait a few seconds, plug them back in and turn it back on again.
-- If the red light is blinking, or doesn't stop blinking after powering on the PC, please unplug the usb cable from the viewfinder (the one closest to front/eyepiece side of the viewfinder), wait a few seconds, and plug it back in.  If it is still blinking after 15s or so, try powering the PC off and on again.
+- If the red light is blinking, or doesn't stop blinking after powering on the PC, please unplug the usb cable from the viewfinder (the one closest to front/eyepiece side of the viewfinder), wait a few seconds, and plug it back in.  If it is still blinking after 15s or so, do the same with the usb connection to the machine.  If it is still blinking, try powering the PC off and on again.
 
