@@ -15,6 +15,7 @@ void viewfinderIO::setup() {
 
 	ledLevel = settings.getValue("app:viewfinder:ledBrightness", 1, 0);
 	eyeLevel = settings.getValue("app:viewfinder:eyeBrightness", 255, 0);
+	faceThreshold = settings.getValue("app:viewfinder:faceThreshold", 300, 0);
 
 	gotFace = false;
 	ledOn = false;
@@ -24,6 +25,7 @@ void viewfinderIO::setup() {
 		connected = connectSerial(port, baud, 5000);
 		while(serial.available() <= 0);
 		setEyeLeds(eyeLevel);
+		setFaceThreshold(faceThreshold);
 		setLed(0);
 	}
 
@@ -121,6 +123,10 @@ void viewfinderIO::setLed(int pwm) {
 
 void viewfinderIO::setEyeLeds(int pwm) {	
 	sendMessage("E" + ofToString(pwm), false);
+}
+
+void viewfinderIO::setFaceThreshold(int thres) {	
+	sendMessage("T" + ofToString(thres), false);
 }
 
 void viewfinderIO::ping() {

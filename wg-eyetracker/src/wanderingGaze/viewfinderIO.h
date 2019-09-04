@@ -30,10 +30,12 @@ class viewfinderIO {
 		void ping();
 
 		// Machine parameters
-		float ledLevel;
-		float eyeLevel;
+		int ledLevel;
+		int eyeLevel;
+		int faceThreshold;
 		void setLed(int pwm);
 		void setEyeLeds(int pwm);
+		void setFaceThreshold(int thres);
 
 		// state flags
 		bool connected;
