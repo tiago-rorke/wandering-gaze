@@ -1,7 +1,7 @@
 # Wandering Gaze
 
 Interactive installation by Ana Teresa Vicente.  
-http://www.anateresavicente.com/index.php/wandering-gaze/
+https://anateresavicente.com/wandering-gaze  
 
 The system comprises:
  - core X-Y 2 axisgantry housed in a slightly oversized picture frame
